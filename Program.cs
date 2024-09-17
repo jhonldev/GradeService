@@ -14,6 +14,8 @@ builder.Services.AddDbContext<DataContext>(options =>
 builder.Services.AddScoped<IGradeRepository, GradeRepository>();
 builder.Services.AddScoped<IGradeService, GradeService>();
 
+builder.WebHost.UseUrls("http://*:5119");
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers();

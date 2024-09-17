@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\r\n    \"subjectName\": \"Fisica Avanzada\",\r\n    \"gradeName\": \"Prueba 1\",\r\n    \"gradeValue\" : 3,\r\n    \"comment\" : \"Reprobado\",\r\n    \"studentUuid\" : \"d02c3f97-3746-4b39-8828-1acc9e1ac8de\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -22,14 +22,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5119/assingGrade",
-					"protocol": "http",
+					"raw": "https://gradeservice.onrender.com/api/Grade/assignGrade",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"gradeservice",
+						"onrender",
+						"com"
 					],
-					"port": "5119",
 					"path": [
-						"assingGrade"
+						"api",
+						"Grade",
+						"assignGrade"
 					]
 				}
 			},
@@ -42,7 +45,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"uuid\": \"ff66435d-f1eb-46dd-961b-e0c5804758f2\",\r\n  \"gradeValue\": 2,\r\n  \"studentUuid\": \"d02c3f97-3746-4b39-8828-1acc9e1ac8de\"\r\n}",
+					"raw": "{\r\n  \"uuid\": \"5276221f-5b30-421f-934b-8ecb10f343b1\",\r\n  \"gradeValue\": 2,\r\n  \"studentUuid\": \"d02c3f97-3746-4b39-8828-1acc9e1ac8de\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -50,12 +53,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5119/api/Grade/updateGrade",
-					"protocol": "http",
+					"raw": "https://gradeservice.onrender.com/api/Grade/updateGrade",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"gradeservice",
+						"onrender",
+						"com"
 					],
-					"port": "5119",
 					"path": [
 						"api",
 						"Grade",

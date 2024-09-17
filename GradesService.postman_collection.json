@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "ad23474e-ce33-4827-947f-adf797bbf36b",
+		"name": "GradesService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33696564",
+		"_collection_link": "https://tallerweb.postman.co/workspace/TallerWeb-Workspace~b3834c5a-c153-483a-842d-f3885411f951/collection/33696564-ad23474e-ce33-4827-947f-adf797bbf36b?action=share&source=collection_link&creator=33696564"
+	},
+	"item": [
+		{
+			"name": "Asignar Nota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5119/assingGrade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5119",
+					"path": [
+						"assingGrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar nota",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uuid\": \"ff66435d-f1eb-46dd-961b-e0c5804758f2\",\r\n  \"gradeValue\": 2,\r\n  \"studentUuid\": \"d02c3f97-3746-4b39-8828-1acc9e1ac8de\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5119/api/Grade/updateGrade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5119",
+					"path": [
+						"api",
+						"Grade",
+						"updateGrade"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

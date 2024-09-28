@@ -11,7 +11,13 @@
 			"name": "Asignar Nota",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Origin",
+						"value": "Hola",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"subjectName\": \"Fisica Avanzada\",\r\n    \"gradeName\": \"Prueba 1\",\r\n    \"gradeValue\" : 3,\r\n    \"comment\" : \"Reprobado\",\r\n    \"studentUuid\" : \"d02c3f97-3746-4b39-8828-1acc9e1ac8de\"\r\n}",
@@ -64,6 +70,40 @@
 						"api",
 						"Grade",
 						"updateGrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener notas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gradeservice.onrender.com/api/Grade/getGrade",
+					"protocol": "https",
+					"host": [
+						"gradeservice",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"Grade",
+						"getGrade"
 					]
 				}
 			},

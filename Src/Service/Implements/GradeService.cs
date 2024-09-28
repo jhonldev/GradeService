@@ -18,9 +18,13 @@ namespace GradesService.Src.Service.Implements{
         }
 
 
-        public async Task<bool> AssignGrade(GradeDto gradeDto){
+        public async Task<Guid> AssignGrade(GradeDto gradeDto){
             var grade = _mapper.Map<Grade>(gradeDto);
-            return await _repository.AssignGrade(grade);
+            Guid idGrade = await _repository.AssignGrade(grade);
+            if(idGrade != Guid.Empty){
+                return grade.Uuid;
+            }
+            return Guid.Empty;
         }
 
         public async Task<bool> UpdateGrade(UpdateGradeDto updateGradeDto){
@@ -33,6 +37,10 @@ namespace GradesService.Src.Service.Implements{
             }
             _mapper.Map(updateGradeDto, grade);
             return await _repository.UpdateGrade(grade);
+        }
+
+        public async Task<Grade[]> GetGrade(){
+            return await _repository.GetGrade();
         }
     }
 }

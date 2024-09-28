@@ -39,8 +39,8 @@ namespace GradesService.Src.Data.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("GradeValue")
-                        .HasColumnType("int");
+                    b.Property<float>("GradeValue")
+                        .HasColumnType("float");
 
                     b.Property<Guid>("StudentUuid")
                         .HasColumnType("char(36)");

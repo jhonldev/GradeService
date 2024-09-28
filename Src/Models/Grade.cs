@@ -7,7 +7,7 @@ namespace GradesService.Src.Models{
         public Guid Uuid { get; set;}
         public string SubjectName {get; set;} = string.Empty;
         public string GradeName {get; set;} = string.Empty;
-        public int GradeValue {get; set;}
+        public float GradeValue {get; set;}
         public string Comment {get; set;} = string.Empty;
         public Guid StudentUuid {get; set;}
 

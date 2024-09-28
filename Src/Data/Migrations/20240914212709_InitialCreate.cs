@@ -23,7 +23,7 @@ namespace GradesService.Src.Data.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     GradeName = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    GradeValue = table.Column<int>(type: "int", nullable: false),
+                    GradeValue = table.Column<float>(type: "float", nullable: false),
                     Comment = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     StudentUuid = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci")
